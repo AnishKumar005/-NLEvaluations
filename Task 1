@@ -1,0 +1,9 @@
+import re
+text='This is a sample text with <span style= 'background-color: orange;">123</span>and<span style="background-color:orange;">456</span>numbers.'
+
+orange background
+pattern = r'<span style = "background-color:\s*orange;">(\d+)</span>'
+
+numbers=re.findall(pattern, text)
+
+print(numbers)
